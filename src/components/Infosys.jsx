@@ -1,9 +1,37 @@
 import React, { useState } from "react";
 import "../App.css";
 import "../index.css";
-import Homes from "./Infosys/Homes";
+// import Homes from "./Infosys/Homes";
 import Contacts from "./Infosys/Contacts";
-import Abouts from "./Infosys/Abouts";
+// import Abouts from "./Infosys/Abouts";
+import data from "./data.json"
+
+const Homes = (e) =>{
+  return(
+<h1>{e}</h1>
+  )
+  
+
+}
+
+
+const Abouts = (e) =>{
+  return(
+      <h1>{e}</h1>
+  )
+  
+
+}
+
+
+
+
+
+
+//not mani function 
+//ttab func start
+
+
 
 const Tabs = ({ config }) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -26,8 +54,26 @@ const Tabs = ({ config }) => {
   );
 };
 
+
+///tab func end
+
+
+
+//main func start
+
 const Infosys = () => {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
+
+  const handleSearch = () => {
+    const filteredResults = data.filter(obj => obj.name.toLowerCase().includes(query.toLowerCase()));
+    setResults(filteredResults);
+  };
+
+
   return (
+
+    <>
     <div className="h-screen flex flex-col mt-9">
       <div className="bg-blue-200 h-96 relative">
         {/* Image Box for 1st Box */}
@@ -52,15 +98,21 @@ const Infosys = () => {
         <div className="">
           <Tabs
             config={[
-              { header: "Home", component: <Homes /> },
-              { header: "About us", component: <Abouts /> },
+              { header: "Home", component: Homes("hi") },
+              { header: "About us", component: Abouts("bye") },
               { header: "contact", component: <Contacts /> },
             ]}
           />
         </div>
       </div>
     </div>
+    
+    
+    </>
+    
   );
 };
+
+//main func end
 
 export default Infosys;
