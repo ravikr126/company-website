@@ -1,11 +1,11 @@
 import React from "react";
-import Infosys from "./components/Infosys";
+import Comp from "./components/Comp";
 
 const App = () => {
   return (
     <>
       
-        <Infosys />
+        <Comp />
     
     </>
   );
