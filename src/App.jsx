@@ -32,14 +32,85 @@ const App = () => {
     setSearchResult(result);
   };
 
+  // const openNewTab = () => {
+  //   const newWindow = window.open('about:blank', '_blank');
+  
+  //   if (newWindow) {
+  //     newWindow.document.write(
+  //       `<pre>${JSON.stringify(searchResult, null, 2)}</pre>`
+  //     );
+  //     newWindow.document.close();  // Close the document to signal that the write is finished
+  //   } else {
+  //     console.error('Unable to open new tab.');
+  //   }
+  // };
+  
+
   const openNewTab = () => {
     const newWindow = window.open('about:blank', '_blank');
   
     if (newWindow) {
-      newWindow.document.write(
-        `<pre>${JSON.stringify(searchResult, null, 2)}</pre>`
-      );
-      newWindow.document.close();  // Close the document to signal that the write is finished
+      newWindow.document.write(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Search Results</title>
+          <style>
+            body {
+              font-family: Arial, sans-serif;
+              background-color: #f4f4f4;
+              padding: 20px;
+            }
+            h2 {
+              color: #333;
+            }
+            .user-card {
+              background-color: #fff;
+              border: 1px solid #ddd;
+              border-radius: 8px;
+              padding: 15px;
+              margin-bottom: 15px;
+            }
+            .username {
+              font-size: 1.5em;
+              font-weight: bold;
+              color: #007bff;
+            }
+            .user-details {
+              margin-top: 10px;
+              color: #555;
+            }
+            .identifier {
+              margin-top: 10px;
+              color: #333;
+            }
+          </style>
+        </head>
+        <body>
+          <h2>Search Results</h2>
+      `);
+  
+      // Display each user as a user card
+      searchResult.forEach((user) => {
+        newWindow.document.write(`
+          <div class="user-card">
+            <div class="username">${user['Username']}</div>
+            <div class="user-details">
+              <p>${user['First name']} ${user['Last name']}</p>
+            </div>
+            <div class="identifier">Identifier: ${user['Identifier']}</div>
+          </div>
+        `);
+      });
+  
+      newWindow.document.write(`
+        </body>
+        </html>
+      `);
+  
+      newWindow.document.close(); // Close the document to signal that the write is finished
     } else {
       console.error('Unable to open new tab.');
     }
