@@ -34,25 +34,6 @@ const App = () => {
 
     
   };
-
-
-
-
-
-
-  
-  // const openNewTab = () => {
-  //   const newWindow = window.open('about:blank', '_blank');
-  
-  //   if (newWindow) {
-  //     newWindow.document.write(
-  //       `<pre>${JSON.stringify(searchResult, null, 2)}</pre>`
-  //     );
-  //     newWindow.document.close();  // Close the document to signal that the write is finished
-  //   } else {
-  //     console.error('Unable to open new tab.');
-  //   }
-  // };
   
 
   const openNewTab = () => {
