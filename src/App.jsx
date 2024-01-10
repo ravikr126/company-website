@@ -30,8 +30,17 @@ const App = () => {
           .includes(searchValue.toLowerCase())
     );
     setSearchResult(result);
+
+
+    
   };
 
+
+
+
+
+
+  
   // const openNewTab = () => {
   //   const newWindow = window.open('about:blank', '_blank');
   
