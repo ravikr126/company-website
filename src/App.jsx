@@ -56,7 +56,7 @@ const App = () => {
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Search Results</title>
+          <title>Company Details</title>
           <style>
             body {
               font-family: Arial, sans-serif;
@@ -78,36 +78,55 @@ const App = () => {
               font-weight: bold;
               color: #007bff;
             }
-            .company-description,
-            .about-us,
-            .contact-us {
-              margin-top: 10px;
-              color: #555;
+            .tab-container {
+              margin-top: 20px;
             }
-            .output-website-link {
-              margin-top: 10px;
-              color: #333;
+            .tab-btn {
+              cursor: pointer;
+              background-color: #007bff;
+              color: #fff;
+              padding: 10px;
+              margin-right: 10px;
+              border: none;
+              border-radius: 4px;
+            }
+            .tab-content {
+              display: none;
+              margin-top: 15px;
             }
           </style>
         </head>
         <body>
-          <h2>Search Results</h2>
-      `);
-  
-      // Display each company as a company card
-      searchResult.forEach((company) => {
-        newWindow.document.write(`
           <div class="company-card">
-            <div class="company-name">${company['Company']}</div>
-            <div class="company-description">${company['Company descripion']}</div>
-            <div class="about-us">${company['about us']}</div>
-            <div class="contact-us">${company['Contact us']}</div>
-            <div class="output-website-link">Output Website Link: ${company['Output website link']}</div>
+            <div class="company-name">${searchResult[0]['Company']}</div>
+            <div class="tab-container">
+              <button class="tab-btn" onclick="showTab('company-description')">Company Description</button>
+              <button class="tab-btn" onclick="showTab('about-us')">About Us</button>
+              <button class="tab-btn" onclick="showTab('contact-us')">Contact Us</button>
+              <button class="tab-btn" onclick="showTab('website-link')">Website Link</button>
+            </div>
+            <div id="company-description" class="tab-content">
+              <p>${searchResult[0]['Company descripion']}</p>
+            </div>
+            <div id="about-us" class="tab-content">
+              <p>${searchResult[0]['about us']}</p>
+            </div>
+            <div id="contact-us" class="tab-content">
+              <p>${searchResult[0]['Contact us']}</p>
+            </div>
+            <div id="website-link" class="tab-content">
+              <p>Output Website Link: ${searchResult[0]['Output website link']}</p>
+            </div>
           </div>
-        `);
-      });
-  
-      newWindow.document.write(`
+          <script>
+            function showTab(tabId) {
+              const tabs = document.querySelectorAll('.tab-content');
+              tabs.forEach(tab => {
+                tab.style.display = 'none';
+              });
+              document.getElementById(tabId).style.display = 'block';
+            }
+          </script>
         </body>
         </html>
       `);
