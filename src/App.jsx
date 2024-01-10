@@ -66,23 +66,25 @@ const App = () => {
             h2 {
               color: #333;
             }
-            .user-card {
+            .company-card {
               background-color: #fff;
               border: 1px solid #ddd;
               border-radius: 8px;
               padding: 15px;
               margin-bottom: 15px;
             }
-            .username {
+            .company-name {
               font-size: 1.5em;
               font-weight: bold;
               color: #007bff;
             }
-            .user-details {
+            .company-description,
+            .about-us,
+            .contact-us {
               margin-top: 10px;
               color: #555;
             }
-            .identifier {
+            .output-website-link {
               margin-top: 10px;
               color: #333;
             }
@@ -92,15 +94,15 @@ const App = () => {
           <h2>Search Results</h2>
       `);
   
-      // Display each user as a user card
-      searchResult.forEach((user) => {
+      // Display each company as a company card
+      searchResult.forEach((company) => {
         newWindow.document.write(`
-          <div class="user-card">
-            <div class="username">${user['Username']}</div>
-            <div class="user-details">
-              <p>${user['First name']} ${user['Last name']}</p>
-            </div>
-            <div class="identifier">Identifier: ${user['Identifier']}</div>
+          <div class="company-card">
+            <div class="company-name">${company['Company']}</div>
+            <div class="company-description">${company['Company descripion']}</div>
+            <div class="about-us">${company['about us']}</div>
+            <div class="contact-us">${company['Contact us']}</div>
+            <div class="output-website-link">Output Website Link: ${company['Output website link']}</div>
           </div>
         `);
       });
