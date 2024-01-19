@@ -1,4 +1,3 @@
-// Header.js
 import React from "react";
 import { FaRegUser } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
@@ -23,20 +22,22 @@ const Header2 = () => {
 
   return (
     <header
-      className=" py-4 text-black"
+      className="py-4 text-black"
       style={{
-        background: "linear-gradient(to right, #B6FFFA  0%, #FFC0CB 75%)",
+        background: "linear-gradient(to right, #B6FFFA 0%, #FFC0CB 75%)",
       }}
     >
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
-        <div className="ml-20">logo</div>
+        <div className="ml-4 md:ml-20 ">
+          <img src="./logo1.jpg" alt="" />
+        </div>
         {/* Centered Links */}
-        <nav className="ml-50  flex items-center justify-center gap-20 md:justify-start">
+        <nav className="ml-4 md:ml-50 mt-2 md:mt-0 flex items-center justify-center md:justify-start gap-24">
           {links.map((link) => (
             <a
               key={link.id}
               href={link.href}
-              className="text-lg mx-4 my-2 md:my-0 hover:underline"
+              className="text-lg mx-2 my-2 md:my-0 hover:underline"
             >
               {link.label}
             </a>
@@ -49,7 +50,7 @@ const Header2 = () => {
             <a
               key={option.id}
               href={option.href}
-              className="text-lg mx-4 hover:underline flex items-center"
+              className="text-lg mx-2 md:mx-4 hover:underline flex items-center"
             >
               {option.icon} {/* Render the icon directly */}
               <span className="ml-2">{option.label}</span>
