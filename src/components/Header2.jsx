@@ -18,15 +18,20 @@ const Header2 = () => {
       label: "Sign In",
       href: "/signin",
     },
-    { id: 6, icon: <FiShoppingBag /> , label: "Cart", href: "/cart" },
+    { id: 6, icon: <FiShoppingBag />, label: "Cart", href: "/cart" },
   ];
 
   return (
-    <header className="bg-blue-500 text-white py-4">
+    <header
+      className=" py-4 text-black"
+      style={{
+        background: "linear-gradient(to right, #B6FFFA  0%, #FFC0CB 75%)",
+      }}
+    >
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="ml-20">logo</div>
         {/* Centered Links */}
-        <nav className="ml-50 flex items-center justify-center gap-20 md:justify-start">
+        <nav className="ml-50  flex items-center justify-center gap-20 md:justify-start">
           {links.map((link) => (
             <a
               key={link.id}
