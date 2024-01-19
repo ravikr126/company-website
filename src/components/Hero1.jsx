@@ -56,12 +56,10 @@ function Hero1() {
       {/* 1st slider */}
 
       <div className="w-1/2 h-[400px] relative group overflow-hidden ">
-        
         {/* Image */}
         <div
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
-          
         ></div>
 
         {/* Left Arrow */}
@@ -85,6 +83,17 @@ function Hero1() {
               }`}
             ></div>
           ))}
+        </div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-white">
+          <h2 className="text-3xl font-bold mb-2">Your Slide Title</h2>
+          <p className="text-lg mb-4">Your slide description goes here.</p>
+          
+          <button
+            className="bg-blue-500 text-white px-4 py-2 rounded-full"
+            onClick={nextSlide}
+          >
+            Next
+          </button>
         </div>
       </div>
 
