@@ -1,6 +1,64 @@
 import React from "react";
 
+const DropdownList = ({ items }) => {
+  return (
+    <div className="flex ">
+      <ul className="flex gap-10">
+        {items.map((item, index) => (
+          <li key={index}>
+            <h3>{item.title}</h3>
+            <select>
+              {item.dropdownOptions.map((option, optionIndex) => (
+                <option key={optionIndex} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </li>
+        ))}
+      </ul>
+      <button className="px-8 bg-orange-400 ml-6">Next</button>
+    </div>
+  );
+};
+
 const Phoneprice = () => {
+  const data = [
+    {
+      title: "Brands",
+      dropdownOptions: [
+        { value: "option1", label: "Option 1" },
+        { value: "option2", label: "Option 2" },
+        { value: "option3", label: "Option 3" },
+      ],
+    },
+    {
+      title: "Models",
+      dropdownOptions: [
+        { value: "option4", label: "Option 4" },
+        { value: "option5", label: "Option 5" },
+        { value: "option6", label: "Option 6" },
+      ],
+    },
+    {
+      title: "Years",
+      dropdownOptions: [
+        { value: "option4", label: "Option 4" },
+        { value: "option5", label: "Option 5" },
+        { value: "option6", label: "Option 6" },
+      ],
+    },
+    {
+      title: "Pincode",
+      dropdownOptions: [
+        { value: "option4", label: "Option 4" },
+        { value: "option5", label: "Option 5" },
+        { value: "option6", label: "Option 6" },
+      ],
+    },
+    // Add more categories as needed
+  ];
+
   return (
     <>
       <div className="mb-5 rounded-xl mx-5 h-96 p-5 bg-[url('https://images.pexels.com/photos/3006340/pexels-photo-3006340.jpeg?auto=compress&cs=tinysrgb&w=600')]">
@@ -14,6 +72,9 @@ const Phoneprice = () => {
             Select a year , Brands and models to see what you cann expect to pay
             for it this week.
           </p>
+          <div className="mt-10">
+            <DropdownList items={data} />
+          </div>
         </div>
       </div>
     </>
