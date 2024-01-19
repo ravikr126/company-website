@@ -15,7 +15,7 @@ const Header1 = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row md:justify-center mt-5">
+    <div className="flex flex-col md:flex-row justify-center md:justify-center mt-5 mb-5">  
       <div className="w-full md:w-5/12  mx-auto mb-4 md:mb-0">
         <div className="flex items-center border-2 border-blue-500 rounded-lg">
           {/* Search Input */}
