@@ -16,9 +16,11 @@ const Header2 = () => {
 
   return (
     <header className="bg-blue-500 text-white py-4">
+      
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+      logo
         {/* Centered Links */}
-        <nav className="ml-96 flex items-center justify-center gap-20 md:justify-start">
+        <nav className="ml-50 flex items-center justify-center gap-20 md:justify-start">
           {links.map((link) => (
             <a
               key={link.id}
