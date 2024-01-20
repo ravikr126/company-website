@@ -61,10 +61,10 @@ const Phoneprice = () => {
 
   return (
     <>
-      <div className="mb-5 rounded-xl mx-5 h-96 p-5 bg-[url('https://images.pexels.com/photos/3006340/pexels-photo-3006340.jpeg?auto=compress&cs=tinysrgb&w=600')]">
+      <div className="mb-5 rounded-xl mx-5 h-96 p-5 bg-[#E26EE5]">
         <p className="text-white text-4xl font-bold">Phone Prices</p>
 
-        <div className="drop-shadow-xl p-5 mt-8 border rounded-xl h-[250px] w-1/2 bg-[url('https://images.pexels.com/photos/531767/pexels-photo-531767.jpeg?auto=compress&cs=tinysrgb&w=600')]">
+        <div className="drop-shadow-xl p-5 mt-8 border rounded-xl h-[250px] w-1/2 bg-[#00B7C2]">
           <p className="text-3xl font-bold text-white mb-2">
             Search for a Phone
           </p>
