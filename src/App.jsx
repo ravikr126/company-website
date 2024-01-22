@@ -4,6 +4,7 @@ import Header2 from './components/Header2';
 import Hero1 from './components/Hero1'
 import Phoneprice from './components/Phoneprice';
 import ShopbyBrand from './components/ShopbyBrand';
+import ShopbyCategory from './components/ShopbyCategory';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
    <Hero1/>
    <Phoneprice/>
    <ShopbyBrand/>
+   <ShopbyCategory/>
+   
    </>
   );
 }
