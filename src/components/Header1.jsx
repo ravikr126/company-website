@@ -15,9 +15,9 @@ const Header1 = () => {
   };
 
   return (
-    <div className="bg-blue-300 py-5">
+    <div className="bg-blue-300 py-5 relative">
       <div className="flex flex-col md:flex-row justify-center md:justify-center  space-y-4 md:space-y-0">
-        <div className="w-full md:w-5/12 mx-auto mb-4 md:mb-0">
+        <div className="w-full md:w-5/12 mx-auto mb-4 md:mb-0 relative z-10">
           <div className="flex items-center border-2 bg-white border-blue-500 rounded-lg">
             {/* Search Input */}
             <input
@@ -80,7 +80,7 @@ const Header1 = () => {
         </div>
 
         {/* Language selection Dropdown */}
-        <div className="relative w-full md:w-2/12 md:ml-2 border border-blue-500 bg-white rounded-lg mr-10">
+        <div className="relative w-full md:w-2/12 md:ml-2 border border-blue-500 bg-white rounded-lg mr-10 z-10">
           <div className="relative inline-block">
             <button
               onClick={togglelangDropdown}

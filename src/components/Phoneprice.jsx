@@ -6,10 +6,10 @@ const DropdownList = ({ items }) => {
       <ul className="flex gap-10">
         {items.map((item, index) => (
           <li key={index}>
-            <h3>{item.title}</h3>
-            <select>
+            <h3 className="text-base">{item.title}</h3>
+            <select className="rounded-lg border-black border p-2">
               {item.dropdownOptions.map((option, optionIndex) => (
-                <option key={optionIndex} value={option.value}>
+                <option key={optionIndex} value={option.value} >
                   {option.label}
                 </option>
               ))}
@@ -30,6 +30,7 @@ const Phoneprice = () => {
         { value: "option1", label: "Option 1" },
         { value: "option2", label: "Option 2" },
         { value: "option3", label: "Option 3" },
+        { value: "option4", label: "Option 4" },
       ],
     },
     {
