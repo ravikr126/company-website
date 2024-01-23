@@ -18,11 +18,11 @@ const Header1 = () => {
     <div className="bg-blue-300 py-5 relative">
       <div className="flex flex-col md:flex-row justify-center md:justify-center  space-y-4 md:space-y-0">
         <div className="w-full md:w-5/12 mx-auto mb-4 md:mb-0 relative z-10">
-          <div className="flex items-center border-2 bg-white border-blue-500 rounded-lg">
+          <div className="flex items-center border-2 bg-white border-blue-500 rounded-[18px]">
             {/* Search Input */}
             <input
               type="text"
-              className="w-full p-2 focus:outline-none"
+              className="w-full p-2 focus:outline-none rounded-[18px]"
               placeholder="What wish genie have to fulfill ....."
             />
             {/* Dropdown */}
@@ -73,22 +73,22 @@ const Header1 = () => {
               )}
             </div>
             {/* Search Button */}
-            <button className="ml-2 bg-blue-500 text-white text-4xl py-2 px-4 rounded">
+            <button className="rounded-[14px] ml-2 bg-blue-500 text-white text-4xl py-2 px-4 ">
               <IoSearchSharp />
             </button>
           </div>
         </div>
 
         {/* Language selection Dropdown */}
-        <div className="relative w-full md:w-2/12 md:ml-2 border border-blue-500 bg-white rounded-lg mr-10 z-10">
-          <div className="relative inline-block">
+        <div className="relative w-full md:w-1/12 md:ml-2 border border-blue-500 bg-white rounded-[18px] mr-10 z-10">
+          <div className="relative inline-block ">
             <button
               onClick={togglelangDropdown}
-              className="whitespace-nowrap text-xl py-3 px-4 rounded inline-flex items-center"
+              className="whitespace-nowrap text-base py-2 px-3 inline-flex items-center"
             >
               All languages
               <svg
-                className="h-7 w-5 ml-20"
+                className="h-7 w-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -104,7 +104,7 @@ const Header1 = () => {
             </button>
             {/* Dropdown Content */}
             {isDropdownlangOpen && (
-              <div className="absolute right-0 mt-2 w-48 max-h-48 overflow-y-auto bg-white border rounded-lg shadow-lg">
+              <div className="absolute right-0 mt-2 w-48 max-h-48 overflow-y-auto bg-white border  shadow-lg">
                 {/* Dropdown items go here */}
                 <a
                   href="#"
