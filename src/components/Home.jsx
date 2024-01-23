@@ -3,6 +3,7 @@ import Hero1 from "./Homepage/Hero1";
 import Phoneprice from "./Homepage/Phoneprice";
 import ShopbyBrand from "./Homepage/ShopbyBrand";
 import ShopbyCategory from "./Homepage/ShopbyCategory";
+import SmartBuy from "./Homepage/SmartBuy"
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Phoneprice />
       <ShopbyBrand />
       <ShopbyCategory />
+      <SmartBuy/>
     </>
   );
 };
