@@ -21,18 +21,13 @@ const Header2 = () => {
   ];
 
   return (
-    <header
-      className="py-4 text-black"
-      style={{
-        background: "linear-gradient(to right, #B6FFFA 0%, #FFC0CB 75%)",
-      }}
-    >
+    <header className="py-4 text-black bg-gradient-to-r from-cyan-200 to-pink-200">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
-        <div className="ml-4 md:ml-20 ">
-          <img src="./logo1.jpg" alt="" />
+        <div className="mx-4 md:mx-0 md:mr-5 text-center">
+          <img src="./logo1.jpg" alt="" className="w-20 h-auto" />
         </div>
         {/* Centered Links */}
-        <nav className="ml-4 md:ml-50 mt-2 md:mt-0 flex items-center justify-center md:justify-start gap-24">
+        <nav className="ml-4 md:ml-0 mt-2 md:mt-0 flex items-center justify-center md:justify-end gap-3 md:gap-8">
           {links.map((link) => (
             <a
               key={link.id}
@@ -45,7 +40,7 @@ const Header2 = () => {
         </nav>
 
         {/* Right Side Options */}
-        <div className="flex mt-2 md:mt-0 mr-5">
+        <div className="flex mt-2 md:mt-0 md:ml-auto mr-4">
           {rightOptions.map((option) => (
             <a
               key={option.id}
@@ -53,7 +48,7 @@ const Header2 = () => {
               className="text-lg mx-2 md:mx-4 hover:underline flex items-center"
             >
               {option.icon} {/* Render the icon directly */}
-              <span className="ml-2">{option.label}</span>
+              <span className="ml-2 hidden md:inline">{option.label}</span>
             </a>
           ))}
         </div>
