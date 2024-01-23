@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { BsChevronCompactRight } from "react-icons/bs";
 
 function Hero1() {
   const slides = [
