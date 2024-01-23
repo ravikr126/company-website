@@ -27,7 +27,7 @@ const Header2 = () => {
           <img src="./logo1.jpg" alt="" className="w-20 h-auto" />
         </div>
         {/* Centered Links */}
-        <nav className="ml-4 md:ml-0 mt-2 md:mt-0 flex items-center justify-center md:justify-end gap-3 md:gap-8">
+        <nav className="ml-4 md:ml-0 mt-2 md:mt-0 flex items-center justify-center md:justify-end gap-3 md:gap-24">
           {links.map((link) => (
             <a
               key={link.id}
