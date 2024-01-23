@@ -9,7 +9,7 @@ const DropdownList = ({ items }) => {
             <h3 className="text-base">{item.title}</h3>
             <select className="rounded-lg border-black border p-2">
               {item.dropdownOptions.map((option, optionIndex) => (
-                <option key={optionIndex} value={option.value} >
+                <option key={optionIndex} value={option.value}>
                   {option.label}
                 </option>
               ))}
@@ -62,10 +62,10 @@ const Phoneprice = () => {
 
   return (
     <>
-      <div className="mb-5 rounded-xl mx-5 h-96 p-5 bg-[#E26EE5]">
+      <div className="mb-5 rounded-xl mx-5 h-96 p-5 bg-[#AC87C5]">
         <p className="text-white text-4xl font-bold">Phone Prices</p>
 
-        <div className="drop-shadow-xl p-5 mt-8 border rounded-xl h-[250px] w-1/2 bg-[#00B7C2]">
+        <div className="drop-shadow-xl p-5 mt-8 border rounded-xl h-[250px] w-1/2 bg-[#7071E8]">
           <p className="text-3xl font-bold text-white mb-2">
             Search for a Phone
           </p>
