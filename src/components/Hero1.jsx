@@ -98,17 +98,38 @@ function Hero1() {
 
       {/* 2nd div */}
 
-      <div className="md:w-1/2 w-full h-[400px] flex flex-col gap-2">
-        <img
-          src="https://images.pexels.com/photos/56904/pexels-photo-56904.jpeg?auto=compress&cs=tinysrgb&w=600"
-          alt=""
-          className="flex-grow h-0 rounded-2xl"
-        />
-        <img
-          src="https://images.pexels.com/photos/56904/pexels-photo-56904.jpeg?auto=compress&cs=tinysrgb&w=600"
-          alt=""
-          className="flex-grow h-0 rounded-2xl"
-        />
+      <div className="md:w-1/2 w-full flex flex-col gap-2 relative">
+        <div className="flex-grow h-[180px] relative">
+          <img
+            src="https://images.pexels.com/photos/56904/pexels-photo-56904.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+            className="w-full h-full rounded-2xl object-cover"
+          />
+          <div className="absolute top-3 left-0 p-4 text-white mx-5 ">
+            <p className="">IOS</p>
+            <p className="text-3xl text-[#756AB6] font-bold">Apple</p>
+            <p className="text-3xl text-[#756AB6] font-bold mb-4">iPhone 15</p>
+            <button className="font-bold py-2 px-4 bg-[#756AB6] rounded-xl">
+              Shop Now
+            </button>
+          </div>
+        </div>
+
+        <div className="flex-grow h-[180px] relative">
+          <img
+            src="https://images.pexels.com/photos/56904/pexels-photo-56904.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+            className="w-full h-full rounded-2xl object-cover"
+          />
+          <div className="absolute top-3 left-0 p-4 text-white mx-5 ">
+            <p className="">Android</p>
+            <p className="text-3xl text-[#756AB6] font-bold">Google</p>
+            <p className="text-3xl text-[#756AB6] font-bold mb-4">Pixel 7a</p>
+            <button className="font-bold py-2 px-4 bg-[#FFA732] rounded-xl">
+              Shop Now
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
