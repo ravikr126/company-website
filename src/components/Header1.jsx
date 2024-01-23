@@ -53,19 +53,19 @@ const Header1 = () => {
                   {/* Dropdown items go here */}
                   <a
                     href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-400"
                   >
                     Option 1
                   </a>
                   <a
                     href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-400"
                   >
                     Option 2
                   </a>
                   <a
                     href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-400"
                   >
                     Option 3
                   </a>
@@ -80,11 +80,11 @@ const Header1 = () => {
         </div>
 
         {/* Language selection Dropdown */}
-        <div className="relative w-full md:w-1/12 md:ml-2 border border-blue-500 bg-white rounded-[18px] mr-10 z-10">
+        <div className="relative w-full md:w-[150px] md:ml-2 border border-blue-500 bg-white rounded-[18px] mr-10 z-10">
           <div className="relative inline-block ">
             <button
               onClick={togglelangDropdown}
-              className="whitespace-nowrap text-base py-2 px-3 inline-flex items-center"
+              className="whitespace-nowrap text-base py-3 px-3 inline-flex items-center"
             >
               All languages
               <svg
@@ -104,23 +104,23 @@ const Header1 = () => {
             </button>
             {/* Dropdown Content */}
             {isDropdownlangOpen && (
-              <div className="absolute right-0 mt-2 w-48 max-h-48 overflow-y-auto bg-white border  shadow-lg">
+              <div className="rounded-[18px] absolute right-0 mt-2 w-48 max-h-48 overflow-y-auto bg-white border  shadow-lg">
                 {/* Dropdown items go here */}
                 <a
                   href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-400"
                 >
                   Option 1
                 </a>
                 <a
                   href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-400"
                 >
                   Option 2
                 </a>
                 <a
                   href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-400"
                 >
                   Option 3
                 </a>
