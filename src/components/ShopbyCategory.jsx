@@ -4,7 +4,7 @@ import axios from "axios";
 const DropdownList = ({ items }) => {
   return (
     <div className="flex ">
-      <ul className="flex gap-10">
+      <ul className="flex-col">
         {items.map((item, index) => (
           <li key={index}>
             <h3 className="text-base">{item.title}</h3>
@@ -17,8 +17,9 @@ const DropdownList = ({ items }) => {
             </select>
           </li>
         ))}
+        <button className="px-8 bg-orange-400 ">Next</button>
       </ul>
-      <button className="px-8 bg-orange-400 ml-6">Next</button>
+      
     </div>
   );
 };
@@ -64,9 +65,10 @@ const ShopbyCategory = () => {
 
   useEffect(() => {
     // Replace 'your-api-endpoint' with the actual API endpoint
-    axios.get('your-api-endpoint')
+    axios
+      .get("your-api-endpoint")
       .then((response) => setCardData(response.data))
-      .catch((error) => console.error('Error fetching card data:', error));
+      .catch((error) => console.error("Error fetching card data:", error));
   }, []);
 
   return (
@@ -75,34 +77,30 @@ const ShopbyCategory = () => {
         <p className="font-bold text-2xl">Shop By Category</p>
 
         <div className="w-2/3">
-        <div className="card-container">
-      {Array.isArray(cardData) && cardData.length > 0 ? (
-        cardData.map((card, index) => (
-          <div key={index} className="card">
-            <img src={card.image} alt={`Card ${index + 1}`} />
-            <h2>{card.title}</h2>
+          <div className="card-container">
+            {Array.isArray(cardData) && cardData.length > 0 ? (
+              cardData.map((card, index) => (
+                <div key={index} className="card">
+                  <img src={card.image} alt={`Card ${index + 1}`} />
+                  <h2>{card.title}</h2>
+                </div>
+              ))
+            ) : (
+              <p>No data available</p>
+            )}
           </div>
-        ))
-      ) : (
-        <p>No data available</p>
-      )}
-    </div>
         </div>
 
-        <div className="text-right mb-5 rounded-xl mx-5 h-96 p-5 bg-blue-700">
-          <p className="text-white text-4xl font-bold">Phone Prices</p>
-
-          <div className="drop-shadow-xl p-5 mt-8 border rounded-xl h-[250px] w-1/2 bg-[#00B7C2]">
-            <p className="text-3xl font-bold text-white mb-2">
-              Search for a Phone
-            </p>
-            <p className="text-base font-bold text-white">
-              Select a year , Brands and models to see what you cann expect to
-              pay for it this week.
-            </p>
-            <div className="mt-10">
-              <DropdownList items={data} />
-            </div>
+        <div className="text-left mb-5 rounded-xl mx-5 h-96 p-5 bg-blue-700">
+          <p className="text-3xl font-bold text-white mb-2">
+            Your New Wish Phone Price Quota
+          </p>
+          <p className="text-base font-bold text-white">
+            Get the best deal on Wish Phones!
+          </p>
+          <p className="text-white">Compare prices from three local Sellers</p>
+          <div className="mt-10">
+            <DropdownList items={data} />
           </div>
         </div>
       </div>
