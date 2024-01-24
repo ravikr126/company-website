@@ -4,6 +4,7 @@ import Phoneprice from "./Homepage/Phoneprice";
 import ShopbyBrand from "./Homepage/ShopbyBrand";
 import ShopbyCategory from "./Homepage/ShopbyCategory";
 import SmartBuy from "./Homepage/SmartBuy"
+import ProductCat from "./Homepage/ProductCat";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <ShopbyBrand />
       <ShopbyCategory />
       <SmartBuy/>
+      <ProductCat/>
     </>
   );
 };
