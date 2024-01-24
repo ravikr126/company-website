@@ -7,10 +7,10 @@ const SmartBuy = () => {
       title: "Start your current phones",
       imageUrl: "../assets/HomeImages/404.png",
       contains:
-        "Welcome to Mobile Genie. Buckle ip for Savings Galore. The mobile ride is about to start, and your mobilw wishes may really come true ",
+        "Welcome to Mobile Genie. Buckle up for Savings Galore. The mobile ride is about to start, and your mobile wishes may really come true",
     },
     {
-      title: "Recommandation for You ",
+      title: "Recommendation for You",
       imageUrl: "../assets/HomeImages/compaing.png",
       contains: "Recommended for family and friends",
       specialcontains: "Buy More Save More",
@@ -18,16 +18,17 @@ const SmartBuy = () => {
     {
       title: "Get an instant offer",
       imageUrl: "../assets/HomeImages/Buy.png",
-      contains: "Unlock the hidden value for your mobile.Trade More Earn More",
+      contains: "Unlock the hidden value for your mobile. Trade More Earn More",
     },
     {
       title: "Compare Phones",
       imageUrl: "../assets/HomeImages/Jiggling.png",
       contains:
-        "Compare moble phones instantly view side-by-side comparisons, market reviews",
+        "Compare mobile phones instantly view side-by-side comparisons, market reviews",
     },
     // Add more data items as needed
   ];
+
   return (
     <>
       <div className="bg-blue-300 font-bold p-8 flex justify-between">
@@ -45,7 +46,7 @@ const SmartBuy = () => {
       </div>
 
       {/* grid */}
-      <div className="grid grid-cols-4 gap-8 mx-10 my-5 ">
+      <div className="grid grid-cols-4 gap-8 mx-10 my-5">
         {data.map((item, index) => (
           <div
             key={index}
@@ -54,7 +55,7 @@ const SmartBuy = () => {
             {/* Render your content for each item here */}
             <img src={item.imageUrl} alt={item.title} />
             <p className="font-bold text-xl ">{item.title}</p>
-            <p className="">{item.contains}</p>
+            <p>{item.contains}</p>
             <p className="font-bold">{item.specialcontains}</p>
           </div>
         ))}
@@ -65,27 +66,22 @@ const SmartBuy = () => {
       {/* flagsale coming start */}
       <div className="grid grid-cols-2 gap-8 mx-10 h-[400px] my-5">
         <div
-          className="text-center bg-cover "
+          className="text-center bg-cover"
           style={{ background: "linear-gradient(to bottom, white, pink)" }}
         >
           <p className="font-bold text-5xl">FLASH SALE</p>
           <p className="bg-purple-500 text-white mx-20">UP TO 70% OFF</p>
-        </div>
-
-        {/* flipclock start */}
-        <div>
-          <div className="h-[75vh] bg-cover flex justify-center items-center">
-            <div
-              className="font-bold text-white tracking-widest text-center"
-              style={{ fontFamily: "'Red Hat Text', sans-serif" }}
-            >
-              <div className="text=[#8486A9]">
+          {/* flipclock start */}
+          <div className="flex mt-5 text-center">
+            <div className="font-bold text-white text-center">
+              <div className="text-[#8486A9]">
                 <FlipCountdown
                   hideYear
                   hideMonth
                   theme="dark"
-                  size="medium"
+                  size="small"
                   titlePosition="bottom"
+                  text="center"
                   endAt={new Date(
                     Date.now() +
                       1000 /* sec */ *
@@ -96,19 +92,27 @@ const SmartBuy = () => {
                         12 /* year */ *
                         2
                   ).toUTCString()}
-                  dayTitle="DAYS"
-                  hourTitle="HOURS"
-                  minuteTitle="MINUTES"
-                  secondTitle="SECONDS"
                 />
               </div>
             </div>
           </div>
+          {/* flipclock ends */}
+          <div className="text-left flex justify-between">
+            <p>IPHONE 15 PRO</p>
+            <button className="bg-orange-900 text-white px-10 py-2 rounded-2xl">
+              Shop Now
+            </button>
+            <img src="../assets/HomeImages/apple.png" alt="apple" />
+          </div>
         </div>
-        {/* flipclock ends */}
       </div>
-
       {/* flagsale coing end */}
+
+      {/* mobile app version start */}
+
+      {/* mobile app version start */}
+
+      <div></div>
     </>
   );
 };
