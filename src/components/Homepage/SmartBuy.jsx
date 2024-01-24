@@ -30,11 +30,11 @@ const SmartBuy = () => {
   ];
 
   return (
-    <div className="mb-5">
-      <div className="bg-blue-300 font-bold p-8 flex justify-between">
-        <p className="text-6xl font-serif">SMART BUY</p>
+      <div className="mb-5">
+      <div className="bg-blue-300 font-bold p-4 sm:p-8 flex flex-col items-center justify-center">
+        <p className="text-3xl sm:text-4xl font-serif">SMART BUY</p>
         <h1
-          className="text-4xl "
+          className="text-2xl sm:text-4xl mt-2"
           style={{
             background: "-webkit-linear-gradient(left, #3C0753, #3652AD)",
             WebkitBackgroundClip: "text",
@@ -45,18 +45,17 @@ const SmartBuy = () => {
         </h1>
       </div>
 
-      {/* grid */}
-      <div className="grid grid-cols-4 gap-8 mx-10 my-5">
+      {/* Responsive grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mx-4 sm:mx-8 lg:mx-10 my-5">
         {data.map((item, index) => (
           <div
             key={index}
-            className="bg-gray-300 p-8 rounded-[30px]  text-center"
+            className="bg-gray-300 p-4 sm:p-8 rounded-md text-center"
           >
-            {/* Render your content for each item here */}
-            <img src={item.imageUrl} alt={item.title} />
-            <p className="font-bold text-xl ">{item.title}</p>
-            <p>{item.contains}</p>
-            <p className="font-bold">{item.specialcontains}</p>
+            <img src={item.imageUrl} alt={item.title} className="w-full mb-2" />
+            <p className="font-bold text-lg sm:text-xl">{item.title}</p>
+            <p className="text-sm sm:text-base">{item.contains}</p>
+            <p className="font-bold text-sm sm:text-base">{item.specialcontains}</p>
           </div>
         ))}
       </div>
