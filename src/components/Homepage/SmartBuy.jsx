@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import FlipCountdown from "@rumess/react-flip-countdown";
 
 const SmartBuy = () => {
   const data = [
@@ -70,6 +71,41 @@ const SmartBuy = () => {
           <p className="font-bold text-5xl">FLASH SALE</p>
           <p className="bg-purple-500 text-white mx-20">UP TO 70% OFF</p>
         </div>
+
+        {/* flipclock start */}
+        <div>
+          <div className="h-[75vh] bg-cover flex justify-center items-center">
+            <div
+              className="font-bold text-white tracking-widest text-center"
+              style={{ fontFamily: "'Red Hat Text', sans-serif" }}
+            >
+              <div className="text=[#8486A9]">
+                <FlipCountdown
+                  hideYear
+                  hideMonth
+                  theme="dark"
+                  size="medium"
+                  titlePosition="bottom"
+                  endAt={new Date(
+                    Date.now() +
+                      1000 /* sec */ *
+                        60 /* min */ *
+                        60 /* hour */ *
+                        48 /* day */ *
+                        30 /* month */ *
+                        12 /* year */ *
+                        2
+                  ).toUTCString()}
+                  dayTitle="DAYS"
+                  hourTitle="HOURS"
+                  minuteTitle="MINUTES"
+                  secondTitle="SECONDS"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* flipclock ends */}
       </div>
 
       {/* flagsale coing end */}
