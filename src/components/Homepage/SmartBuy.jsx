@@ -111,11 +111,11 @@ const SmartBuy = () => {
               </button>
             </div>
 
-            <img
+            {/* <img
               className="hidden md:block"
               src="../assets/HomeImages/404.png"
               alt="apple"
-            />
+            /> */}
           </div>
         </div>
         {/* flagsale coming end */}
