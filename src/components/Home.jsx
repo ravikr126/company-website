@@ -5,6 +5,7 @@ import ShopbyBrand from "./Homepage/ShopbyBrand";
 import ShopbyCategory from "./Homepage/ShopbyCategory";
 import SmartBuy from "./Homepage/SmartBuy"
 import ProductCat from "./Homepage/ProductCat";
+import Offers from "./Homepage/Offers";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <ShopbyCategory />
       <SmartBuy/>
       <ProductCat/>
+      <Offers/>
     </>
   );
 };

@@ -7,8 +7,8 @@ const DropdownList = ({ items }) => {
       <ul className="flex-col">
         {items.map((item, index) => (
           <li key={index}>
-            <h3 className="text-base">{item.title}</h3>
-            <select className="rounded-lg border-black border p-2">
+            <h3 className="text-xl font-bold">{item.title}</h3>
+            <select className="rounded-lg border-black border p-2 w-[380px]">
               {item.dropdownOptions.map((option, optionIndex) => (
                 <option key={optionIndex} value={option.value}>
                   {option.label}
@@ -17,9 +17,10 @@ const DropdownList = ({ items }) => {
             </select>
           </li>
         ))}
-        <button className="px-8 bg-orange-400 ">Next</button>
+        <button className="px-8 bg-orange-400 py-2 mt-5 rounded-xl">
+          Next
+        </button>
       </ul>
-      
     </div>
   );
 };
@@ -73,7 +74,7 @@ const ShopbyCategory = () => {
 
   return (
     <>
-      <div className="bg-gray-300 flex flex-row p-5 h-[450px] gap-10">
+      <div className="bg-gray-300 flex flex-row p-5 h-[600px] gap-10">
         <p className="font-bold text-2xl">Shop By Category</p>
 
         <div className="w-2/3">
@@ -91,7 +92,7 @@ const ShopbyCategory = () => {
           </div>
         </div>
 
-        <div className="text-left mb-5 rounded-xl mx-5 h-96 p-5 bg-blue-700">
+        <div className="text-left mb-5 rounded-xl mx-5 h-[550px] p-5 bg-blue-700 overflow-hidden">
           <p className="text-3xl font-bold text-white mb-2">
             Your New Wish Phone Price Quota
           </p>
