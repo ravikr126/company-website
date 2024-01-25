@@ -6,7 +6,7 @@ import { BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <>
+    <> 
       <div
         className="text-center h-[300px]"
         style={{ background: "linear-gradient(to right, pink, blue)" }}
@@ -14,7 +14,7 @@ const Footer = () => {
         <img
           src="./assets/HomeImages/logo.png"
           alt="logo"
-          className="w-[200px] justify-center"
+          className="w-[400px] -mt-15 mx-auto justify-center -translate-y-1/2"
         />
 
         {/* links start here */}

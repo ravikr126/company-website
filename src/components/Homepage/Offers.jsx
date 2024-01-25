@@ -6,7 +6,7 @@ const Offers = () => {
     <>
       <div
         style={{ background: "linear-gradient(to bottom, #C5FFF8, white)" }}
-        className="text-center p-8 h-[300px]"
+        className="text-center p-8 h-[400px]"
       >
         <h1 className="text-4xl font-bold">Get our Latest offer</h1>
         <p className="text-2xl mb-8">By subscription</p>
