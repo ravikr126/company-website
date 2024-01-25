@@ -5,11 +5,11 @@ const Offers = () => {
   return (
     <>
       <div
-        style={{ background: "linear-gradient(to bottom, blue, white)" }}
-        className="text-center p-5"
+        style={{ background: "linear-gradient(to bottom, #C5FFF8, white)" }}
+        className="text-center p-8 h-[300px]"
       >
-        <h1 className="text-2xl font-bold">Get our Latest offer</h1>
-        <p>By subscription</p>
+        <h1 className="text-4xl font-bold">Get our Latest offer</h1>
+        <p className="text-2xl mb-8">By subscription</p>
 
         <div className="flex justify-center items-center">
           <div className="w-1/2 flex items-center text-xl p-4 relative">
@@ -18,7 +18,7 @@ const Offers = () => {
               placeholder="EMAIL ADDRESS"
               className="pl-16 p-4 rounded-xl border border-gray-300 flex-grow"
             />
-            <button className="p-4 bg-[#93C5F3] rounded-r-xl absolute right-4">
+            <button className="p-4 font-bold bg-[#7BD3EA] rounded-r-xl absolute right-4">
               Get the Coupons
             </button>
             <CiMail
