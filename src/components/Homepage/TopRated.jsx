@@ -20,6 +20,8 @@ const TopRated = () => {
             View More <FaArrowRight className="ml-2" />
           </a>
         </div>
+
+        {/* //api adding */}
       </div>
     </>
   );
