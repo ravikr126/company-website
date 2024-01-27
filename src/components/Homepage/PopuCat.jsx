@@ -27,7 +27,7 @@ const ProductCat = () => {
   return (
     <div className="p-10 bg-slate-500">
       <div className="flex justify-between font-bold">
-        <h1 className="text-2xl">New Arrivals</h1>
+        <h1 className="text-2xl">Popular Category</h1>
         <a
           href="#"
           style={{

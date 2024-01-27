@@ -9,6 +9,7 @@ import Offers from "./Homepage/Offers";
 import Footer from "./Homepage/Footer";
 import BestPoduct from "./Homepage/BestPoduct";
 import NewArrival from "./Homepage/NewArrival";
+import TopRated from "./Homepage/TopRated";
 
 const Home = () => {
   return (
@@ -17,8 +18,9 @@ const Home = () => {
       <Phoneprice />
       <ShopbyBrand />
       <ShopbyCategory />
-      {/* <SmartBuy /> */}
+      <SmartBuy />
       <PopuCat />
+      <TopRated/>
       <NewArrival/>
       <BestPoduct/>
       <Offers />
