@@ -7,6 +7,7 @@ import SmartBuy from "./Homepage/SmartBuy";
 import ProductCat from "./Homepage/ProductCat";
 import Offers from "./Homepage/Offers";
 import Footer from "./Homepage/Footer";
+import BestPoduct from "./Homepage/BestPoduct";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <ShopbyCategory />
       <SmartBuy />
       <ProductCat />
+      <BestPoduct/>
       <Offers />
       <Footer />
     </>
