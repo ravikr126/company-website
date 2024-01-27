@@ -4,7 +4,7 @@ import Phoneprice from "./Homepage/Phoneprice";
 import ShopbyBrand from "./Homepage/ShopbyBrand";
 import ShopbyCategory from "./Homepage/ShopbyCategory";
 import SmartBuy from "./Homepage/SmartBuy";
-import ProductCat from "./Homepage/ProductCat";
+import PopuCat from "./Homepage/PopuCat";
 import Offers from "./Homepage/Offers";
 import Footer from "./Homepage/Footer";
 import BestPoduct from "./Homepage/BestPoduct";
@@ -13,16 +13,16 @@ import NewArrival from "./Homepage/NewArrival";
 const Home = () => {
   return (
     <>
-      {/* <Hero1 />
+      <Hero1 />
       <Phoneprice />
       <ShopbyBrand />
       <ShopbyCategory />
-      <SmartBuy />
-      <ProductCat /> */}
+      {/* <SmartBuy /> */}
+      <PopuCat />
       <NewArrival/>
-      {/* <BestPoduct/>
+      <BestPoduct/>
       <Offers />
-      <Footer /> */}
+      <Footer />
     </>
   );
 };
