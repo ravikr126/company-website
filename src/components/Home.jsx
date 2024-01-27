@@ -5,8 +5,6 @@ import ShopbyBrand from "./Homepage/ShopbyBrand";
 import ShopbyCategory from "./Homepage/ShopbyCategory";
 import SmartBuy from "./Homepage/SmartBuy";
 import PopuCat from "./Homepage/PopuCat";
-import Offers from "./Homepage/Offers";
-import Footer from "./Homepage/Footer";
 import BestPoduct from "./Homepage/BestPoduct";
 import NewArrival from "./Homepage/NewArrival";
 import TopRated from "./Homepage/TopRated";
@@ -20,11 +18,9 @@ const Home = () => {
       <ShopbyCategory />
       <SmartBuy />
       <PopuCat />
-      <TopRated/>
-      <NewArrival/>
-      <BestPoduct/>
-      <Offers />
-      <Footer />
+      <TopRated />
+      <NewArrival />
+      <BestPoduct />
     </>
   );
 };
