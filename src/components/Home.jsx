@@ -8,19 +8,21 @@ import ProductCat from "./Homepage/ProductCat";
 import Offers from "./Homepage/Offers";
 import Footer from "./Homepage/Footer";
 import BestPoduct from "./Homepage/BestPoduct";
+import NewArrival from "./Homepage/NewArrival";
 
 const Home = () => {
   return (
     <>
-      <Hero1 />
+      {/* <Hero1 />
       <Phoneprice />
       <ShopbyBrand />
       <ShopbyCategory />
       <SmartBuy />
-      <ProductCat />
-      <BestPoduct/>
+      <ProductCat /> */}
+      <NewArrival/>
+      {/* <BestPoduct/>
       <Offers />
-      <Footer />
+      <Footer /> */}
     </>
   );
 };
