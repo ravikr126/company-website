@@ -5,9 +5,10 @@ import { FiShoppingBag } from "react-icons/fi";
 const Header2 = () => {
   const links = [
     { id: 1, label: "Home", href: "/" },
-    { id: 2, label: "About", href: "/about" },
-    { id: 3, label: "Services", href: "/services" },
-    { id: 4, label: "Contact", href: "/contact" },
+    { id: 2, label: "Buy", href: "/buy" },
+    { id: 3, label: "Sell", href: "/sell" },
+    { id: 4, label: "Exchange", href: "/exchange" },
+    { id: 4, label: "Track Order", href: "/trackorder" },
   ];
 
   const rightOptions = [
